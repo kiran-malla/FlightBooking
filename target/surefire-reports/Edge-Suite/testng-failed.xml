@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Edge-Suite]">
+  <parameter name="browser" value="firefox"/>
+  <test name="Edge-Test(failed)">
+    <classes>
+      <class name="com.lufthansa.tests.HomepageTest">
+        <methods>
+          <include name="init"/>
+          <include name="beforeMethod"/>
+          <include name="getDriver"/>
+          <include name="afterMethod"/>
+          <include name="bookTicket"/>
+          <include name="cleanup"/>
+        </methods>
+      </class> <!-- com.lufthansa.tests.HomepageTest -->
+    </classes>
+  </test> <!-- Edge-Test(failed) -->
+</suite> <!-- Failed suite [Edge-Suite] -->

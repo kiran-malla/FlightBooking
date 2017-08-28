@@ -1,0 +1,37 @@
+
+Features:
+
+- Developed in Java with Selenium and TestNG
+- Framework is completly modular - data, pages, tests, utils etc are all separate packages and havve different classes\methods as needed
+- Extent reports integrated, added with HTML tags so that link to the screenshots appear in the report instead of just the path. 
+- No hardcoded values, all the data comes from data.properties file. XLS is generally discouraged due to disadvantges like frequest access issues, need office software to access and properties file is light and nativly supported by Java. For these reasons, took the liberty of replacing xls with properties file. If there is a real need, it can be easily implemented instead of properties.
+- All UI pages follow Page Object Model in PageFactory style.
+- This is a complete Maven project without any need to download any libraries or drivers for the project. The source code can be copied to any location and mvn commands can be used to execute.
+By default pom.xml calls all three xml files for edge, chrome and firefox browsers. Changes can be made to this file to limit it to any one browser.
+- Browser is decided based on the parameter in testng.xlm. Current implementation has three xml files called in the pom but this can be changed to one xml with parellel execution etc based on the need.
+- Screenshots are taken at steps as directed. Also takes screenshot when a test fails and logs the same in ExtentReport as well.
+- java doc created in docs folder
+
+Framework:
+
+Data: Properties file is used instead of hardcoding the data or using xls which is error prone, needs office sw and additional unnessary code.
+
+Packages:
+Data - Data files
+Pages - UI pages
+Tests - tests
+Utils - utility methods
+
+Reports:
+Extent reports - go into folder called ExtentReports and additional folders for chrome, edge or Firefox
+Other reports - test-output folder contains other usual reports
+
+Docs:
+Java docs for the project are created in the docs folder
+
+Files:
+data.properties
+pom.xml
+testng-chrome.xml
+testng-edge.xml
+testng-firefox.xml
